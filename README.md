@@ -11,5 +11,5 @@ The goal of this project is to demonstrate practical skills in:
 
 
 # Architecture diagram
-![Architecture Diagram] (Diagram.png)
+![Architecture Diagram](Diagram.png)
 
