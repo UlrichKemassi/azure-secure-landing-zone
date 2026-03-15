@@ -11,5 +11,5 @@ The goal of this project is to demonstrate practical skills in:
 - Network segmentation
 - Bastion-based administration
 
-Architecture Diagram
-# Architecture
+
+# Architecture diagram
