@@ -10,6 +10,6 @@ The goal of this project is to demonstrate practical skills in:
 - Bastion-based administration
 
 
-# Architecture diagram
+## Architecture diagram
 ![Architecture Diagram](Diagram.png)
 
