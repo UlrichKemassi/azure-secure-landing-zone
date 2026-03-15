@@ -11,7 +11,11 @@ The goal of this project is to demonstrate practical skills in:
 
 
 ## Architecture diagram
-![Architecture Diagram](Diagram.png)
+![Architecture Diagram](docs/Diagram.png)
+![Architecture Diagram](docs/RG.png)
+![Architecture Diagram](docs/Terraform.png)
+![Architecture Diagram](docs/VM.png)
+![Architecture Diagram](docs/VN.png)
 
 ## Technologies
 
