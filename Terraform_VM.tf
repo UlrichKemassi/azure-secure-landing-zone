@@ -20,8 +20,12 @@ resource "azurerm_linux_virtual_machine" "app_vm" {
   size                = "Standard_D2S_v3"
 
   admin_username                  = "azureuser"
-  admin_password                  = "MySecureVM!2026"
-  disable_password_authentication = false
+  disable_password_authentication = true
+
+  admin_ssh_key {
+    username   = "azureuser"
+    public_key = file("C:/Users/Akema/.ssh/id_rsa.pub")
+  }
 
   network_interface_ids = [
     azurerm_network_interface.app_vm_nic.id
