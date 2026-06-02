@@ -97,7 +97,7 @@ terraform apply
 
 ### Virtual Networks
 
-![Virtual Networks](docs/virtual-networks.png)
+![Virtual Networks](docs/virtual-network-layout.png)
 
 ### Monitoring Configuration
 
