@@ -20,7 +20,7 @@ This project implements a Hub-and-Spoke architecture to centralize shared servic
 * VNet Flow Logs
 * Centralized monitoring integration
 
-
+---
 
 ### Production Spoke Virtual Network
 
