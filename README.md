@@ -107,6 +107,10 @@ terraform apply
 
 ![Terraform Deployment](docs/terraform-plan.png)
 
+### Azure Secure Landing Zone - Architecture Design
+
+![Terraform Deployment](docs/azure-diagram.png)
+
 
 ## Skills Demonstrated
 
