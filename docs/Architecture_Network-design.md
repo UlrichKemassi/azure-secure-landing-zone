@@ -4,6 +4,8 @@
 
 This project implements a Hub-and-Spoke architecture to centralize shared services, strengthen security boundaries, and isolate workloads across dedicated virtual networks.
 
+---
+
 ### Hub Virtual Network
 
 **Address Space:** `10.0.0.0/16`
