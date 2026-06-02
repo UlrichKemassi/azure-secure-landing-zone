@@ -133,25 +133,4 @@ terraform apply
 ## Author
 
 Created by Ulrich Kemassi
-
-
-
-
-# azure-secure-landing-zone with Terraform
-## Project Description
-
-
-
-## Architecture diagram
-![Architecture Diagram](docs/Diagram.png)
-![Architecture Diagram](docs/RG.png)
-![Architecture Diagram](docs/Terraform.png)
-![Architecture Diagram](docs/VM.png)
-![Architecture Diagram](docs/VN.png)
-
-
-
-## Author
-
-Ulrich Kemassi
 Cloud & Cybersecurity Enthusiast
