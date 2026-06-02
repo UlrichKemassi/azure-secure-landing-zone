@@ -1,103 +1,67 @@
-# Azure Secure Landing Zone – Terraform Deployment
+# Azure Secure Landing Zone – Terraform Implementation
 
 ## Overview
 
-This project demonstrates the deployment of a secure Azure landing zone using Terraform with a focus on networking, security, monitoring, backup, and Infrastructure as Code best practices.
+This project demonstrates the deployment of a secure Azure landing zone using Infrastructure as Code (IaC) with Terraform. The environment follows a hub-spoke architecture and integrates security, monitoring, backup, and network segmentation principles aligned with Azure best practices.
 
-The environment was designed around Azure administration concepts commonly covered in AZ-104 while integrating security-focused architecture and monitoring components.
-
-
-## Project Objectives
-
-* Build a secure Azure landing zone using Infrastructure as Code
-* Implement hub-and-spoke networking architecture
-* Apply network segmentation and security controls
-* Enable centralized monitoring and diagnostics
-* Configure backup and recovery services
-* Demonstrate Terraform deployment and lifecycle management
+The project was built to strengthen practical skills related to Azure administration (AZ-104), cloud networking, monitoring, and secure infrastructure deployment.
 
 
 ## Architecture
 
-This project uses a Hub-and-Spoke architecture:
+The environment uses a hub-spoke topology:
 
-Hub VNet:
+* Hub Virtual Network for shared services
+* Production Spoke Network
+* Management Spoke Network
+* Azure Bastion for secure administrative access
+* Segmented subnets with Network Security Groups
+* Virtual Network Peering between hub and spokes
 
-* Shared services
-* Azure Bastion
-* Network management components
+### Network Topology
 
-Management Spoke:
+![Network Topology](docs/network-topology.png)
 
-* Administrative workloads
-* Monitoring integration
 
-Production Spoke:
+## Infrastructure Components
 
-* Application subnet
-* Data subnet
-* Segmented network security controls
+### Networking
 
-Architecture documentation and diagrams are available in:
-docs/
-
-## Technologies Used
-
-### Azure Services
-
-* Azure Virtual Network
-* Azure Bastion
-* Azure Network Watcher
-* Azure Monitor
-* Log Analytics Workspace
-* Recovery Services Vault
-* Storage Account
-* Linux Virtual Machine
-* NSGs
+* Hub-Spoke Virtual Network Architecture
 * Virtual Network Peering
+* Multiple segmented subnets
+* Network Security Groups (NSGs)
+* Azure Bastion deployment
+* Private networking principles
 
-### Terraform Providers
+### Compute
 
-* AzureRM Provider
-* AzAPI Provider
-  
+* Linux Virtual Machine deployment
+* Dedicated network interfaces
+* SSH access management
 
-## Security Features
+### Monitoring & Logging
 
-* Hub-and-Spoke network segmentation
-* Network Security Groups
-* Bastion access model
-* Private endpoint network policy configuration
-* Centralized monitoring
-* Backup strategy for workloads
-* Log collection and diagnostics
+* Azure Network Watcher
+* VNET Flow Logs
+* Log Analytics Workspace
+* Diagnostic Settings
+* Traffic Analytics integration
 
+### Backup & Recovery
 
-## Monitoring and Logging
+* Recovery Services Vault
+* VM Backup Policies
+* Protected workloads
 
-Monitoring components implemented:
+### Storage
 
-* Azure Monitor Diagnostic Settings
-* Log Analytics Workspace integration
-* Storage diagnostics
-* Bastion diagnostics
-* Virtual Network Flow Logs
-
-### Monitoring Modernization
-
-Azure deprecated NSG Flow Logs during project development.
-
-To modernize the architecture:
-
-* Deprecated NSG Flow Logs were removed
-* Virtual Network Flow Logs were implemented
-* Monitoring was migrated using AzAPI resources
-* Logging integration was preserved
-
-This migration improved compatibility with newer Azure networking monitoring approaches.
+* Storage Account deployment
+* Logging container creation
 
 
-## Project Structure
+## Terraform Structure
+
 
 Terraform_main.tf
 Terraform_Network.tf
@@ -107,63 +71,68 @@ Terraform_Monitoring.tf
 Terraform_Backup.tf
 Terraform_Storage.tf
 Terraform_Bastion.tf
-Terraform_Logging.tf
 Terraform_Variables.tf
-Terraform_Peering.tf
-docs/
 
+## Deployment Process
 
-## Deployment Steps
-
-Initialize:
+Initialize Terraform:
 terraform init
 
-Validate:
+
+Validate configuration:
 terraform validate
 
-Review:
+Review changes:
 terraform plan
 
-Deploy:
+
+Deploy infrastructure:
 terraform apply
 
+## Azure Resources Deployed
 
-## Screenshots
+### Resource Group Overview
 
-Example screenshots available in:
+![Resource Group](docs/resource-group-overview.png)
 
-```text
-docs/
-```
+### Virtual Networks
 
-Recommended screenshots:
+![Virtual Networks](docs/virtual-networks.png)
 
-* Resource Group deployment
-* Network topology
-* Terraform deployment
-* Virtual Networks
-* Monitoring configuration
+### Monitoring Configuration
 
----
+![Monitoring](docs/monitoring-config.png)
+
+### Terraform Validation
+
+![Terraform Deployment](docs/terraform-plan.png)
+
 
 ## Skills Demonstrated
 
 * Azure Administration (AZ-104)
-* Terraform Infrastructure as Code
-* Azure Networking
+* Infrastructure as Code (Terraform)
+* Hub-Spoke Network Architecture
+* Azure Security Controls
 * Monitoring and Logging
-* Cloud Security
 * Backup and Recovery
-* Troubleshooting and Modernization
-* Git and GitHub workflows
+* Cloud Networking
+* Infrastructure Automation
+* Troubleshooting and Modernization of Azure Services
 
----
+## Lessons Learned
+
+* Migrated from deprecated NSG Flow Logs to VNET Flow Logs
+* Managed Terraform state consistency
+* Resolved provider deprecations
+* Implemented secure network segmentation
+* Applied monitoring best practices
+
+
 
 ## Author
 
 Created by Ulrich Kemassi
-
-
 
 
 
