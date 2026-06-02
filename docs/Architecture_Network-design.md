@@ -8,7 +8,7 @@ Hub-Spoke architecture is used to isolate workloads and centralize security serv
 Address space: 10.0.0.0/16 
  
 Subnets: 
-- AzureBastionSubnet (10.0.1.0/24) 
+- AzureBastionSubnet (10.0.1.0/26) 
 - SharedServicesSubnet (10.0.2.0/24) 
  
 ### Production Spoke VNet 
